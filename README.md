@@ -6,9 +6,9 @@ Implementing steering behaviors in Godot
 
 Player has constant forward velocity.
 
-Turn left using `A` or `&larr;`
+Turn left using `A` or &larr;
 
-Turn right using `D` or `&rarr;`
+Turn right using `D` or &rarr;
 ## Behaviors
 
 `_seek_target` 
