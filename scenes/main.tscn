@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhvx7bbglk5ve"]
+
+[ext_resource type="PackedScene" uid="uid://bt4cjbwxyv8io" path="res://scenes/boid/boid.tscn" id="1_o5qli"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o5qli"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Boid" parent="." groups=["player"] instance=ExtResource("1_o5qli")]
+position = Vector2(589, 351)
+
+[node name="Boid2" parent="." groups=["boids"] instance=ExtResource("1_o5qli")]
+material = SubResource("ShaderMaterial_o5qli")
+position = Vector2(376, 477)
+human_control = false
