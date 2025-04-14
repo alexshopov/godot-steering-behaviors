@@ -4,13 +4,15 @@ Implementing steering behaviors in Godot
 
 ## Controls
 
-Player has constant forward velocity.
+Click anywhere in the game window to set a target position for the agent to move towards.
 
-Turn left using `A` or &larr;
 
-Turn right using `D` or &rarr;
 ## Behaviors
 
-`_seek_target` 
+`KinematicSeek(agent, max_speed)` 
 
-Align and move towards the player's current position
+Align and move towards the target position at a constant velocity
+
+`KinematicArrive(agent, max_speed, radius)`
+
+Align and move towards the target position, slowing down upon approach within a given radius
