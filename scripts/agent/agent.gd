@@ -12,15 +12,7 @@ var screen_size: Vector2
 # ---------------------------------------------------------------------------------
 func _ready() -> void:
 	randomize()
-
-	# start at a random position and orientation within the screen bounds
-	screen_size = get_viewport_rect().size
-	position = Vector2(randf_range(0, screen_size.x), randf_range(0, screen_size.y))
-	rotation = randf_range(0, TAU)
-
-	# set a random initial velocity
-	var angle = randf_range(0, TAU)
-	velocity = Vector2.RIGHT.rotated(angle) * max_speed
+	reset()
 
 #
 # ---------------------------------------------------------------------------------
@@ -36,3 +28,15 @@ func _physics_process(delta: float) -> void:
 
 	position.x = fposmod(position.x, screen_size.x)
 	position.y = fposmod(position.y, screen_size.y)
+
+#
+# ---------------------------------------------------------------------------------
+func reset() -> void:
+	# start at a random position and orientation within the screen bounds
+	screen_size = get_viewport_rect().size
+	position = Vector2(randf_range(0, screen_size.x), randf_range(0, screen_size.y))
+	rotation = randf_range(0, TAU)
+
+	# set a random initial velocity
+	var angle = randf_range(0, TAU)
+	velocity = Vector2.RIGHT.rotated(angle) * max_speed

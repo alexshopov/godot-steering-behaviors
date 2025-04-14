@@ -3,11 +3,11 @@ class_name KinematicArrive extends KinematicSteering
 var radius: float
 var time_to_target: float = 0.25
 
-func _init(p_agent, p_max_speed, p_radius):
-	super(p_agent, p_max_speed)
+func _init(p_agent: CharacterBody2D, p_target: Vector2, p_max_speed: float, p_radius: float):
+	super(p_agent, p_target,  p_max_speed)
 	radius = p_radius
 
-func get_steering(target: Vector2) -> KinematicSteeringOutput:
+func get_steering() -> KinematicSteeringOutput:
 	var out = KinematicSteeringOutput.new()
 	if agent.position == target:
 		return null
