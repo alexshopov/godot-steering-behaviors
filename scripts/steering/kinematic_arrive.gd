@@ -1,12 +1,10 @@
 class_name KinematicArrive extends KinematicSteering
 
-var max_speed: float
 var radius: float
 var time_to_target: float = 0.25
 
 func _init(p_agent, p_max_speed, p_radius):
-	super(p_agent)
-	max_speed = p_max_speed
+	super(p_agent, p_max_speed)
 	radius = p_radius
 
 func get_steering(target: Vector2) -> KinematicSteeringOutput:

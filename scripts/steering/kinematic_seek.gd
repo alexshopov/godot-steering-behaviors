@@ -1,10 +1,7 @@
 class_name KinematicSeek extends KinematicSteering
 
-var max_speed: float
-
 func _init(p_agent, p_max_speed):
-	super(p_agent)
-	max_speed = p_max_speed
+	super(p_agent, p_max_speed)
 
 func get_steering(target: Vector2) -> KinematicSteeringOutput:
 	var out = KinematicSteeringOutput.new()
