@@ -4,5 +4,5 @@
 
 [node name="Main" type="Node2D"]
 
-[node name="Boid" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(38, 38)
+[node name="Agent" parent="." instance=ExtResource("1_o5qli")]
+position = Vector2(24, 29)
