@@ -16,3 +16,7 @@ Align and move towards the target position at a constant velocity
 `KinematicArrive(agent, max_speed, radius)`
 
 Align and move towards the target position, slowing down upon approach within a given radius
+
+`KinematicWander(agent, max_speed, max_rotation)`
+
+Move in the direction of the agent's current orientation. Orientation is randomly modified resulting in meandering movement
