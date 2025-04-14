@@ -1,6 +1,6 @@
 extends Agent
 
-@export var max_rotation: float = PI / 2
+@export var max_rotation: float = PI
 
 func _ready() -> void:
 	super()

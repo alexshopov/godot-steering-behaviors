@@ -22,7 +22,6 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAE
 tile_set = SubResource("TileSet_jyhfs")
 
 [node name="Wanderer" parent="." groups=["agents"] instance=ExtResource("4_jyhfs")]
-modulate = Color(0, 0.575171, 0.267449, 1)
 position = Vector2(723, 236)
 
 [node name="Seeker" parent="." node_paths=PackedStringArray("wanderer") groups=["agents"] instance=ExtResource("4_tbgi4")]
