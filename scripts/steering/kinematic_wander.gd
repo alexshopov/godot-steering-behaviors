@@ -10,7 +10,7 @@ func get_steering(_target) -> KinematicSteeringOutput:
 	var out = KinematicSteeringOutput.new()
 
 	# get velocity from orientation
-	out.velocity = max_speed * Vector2.RIGHT.rotated(agent.rotation)
+	out.velocity = max_speed * agent.orientation_vector()
 
 	# change it up randomly
 	out.rotation = randfn(-1., 1.) * max_rotation
