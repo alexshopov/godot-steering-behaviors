@@ -3,6 +3,8 @@ extends Node2D
 @export var wanderer: Agent
 @export var seeker: Agent
 
+var time_accumulator: float = 0.
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	assert(wanderer != null)
@@ -14,5 +16,8 @@ func _ready() -> void:
 
 	seeker.set_kinematic(KinematicSeek.new(seeker, max_speed))
 
-func _process(_delta: float) -> void:
-	seeker.set_target(wanderer.position)
+func _process(delta: float) -> void:
+	time_accumulator += delta
+	if time_accumulator >= 0.25:
+		time_accumulator = 0.0
+		seeker.set_target(wanderer.position)
