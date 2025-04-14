@@ -1,9 +1,9 @@
 class_name KinematicSeek extends KinematicSteering
 
-func _init(p_agent, p_max_speed):
-	super(p_agent, p_max_speed)
+func _init(p_character: CharacterBody2D, p_target: Vector2, p_max_speed: float):
+	super(p_character, p_target, p_max_speed)
 
-func get_steering(target: Vector2) -> KinematicSteeringOutput:
+func get_steering() -> KinematicSteeringOutput:
 	var out = KinematicSteeringOutput.new()
 
 	if agent.position == target:
