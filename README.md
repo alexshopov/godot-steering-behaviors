@@ -1,5 +1,5 @@
 # godot-steering-behaviors
-Implementing steering behaviors in Godot
+Implementing steering behaviors in Godot based on [AI for Games, Third Edition](https://www.goodreads.com/book/show/41755104-ai-for-games-third-edition)  by Ian Millington
 
 
 ## Controls
