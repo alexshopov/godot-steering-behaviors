@@ -1,12 +1,9 @@
 # godot-steering-behaviors
 Implementing steering behaviors in Godot based on [AI for Games, Third Edition](https://www.goodreads.com/book/show/41755104-ai-for-games-third-edition)  by Ian Millington
 
+![Screenshot 2025-04-13 230352](https://github.com/user-attachments/assets/4e6a6d67-fd4e-4fd6-b0b6-e704f6083c40)
 
-## Controls
-
-Click anywhere in the game window to set a target position for the agent to move towards.
-
-
+This initial demo contains two autonomous agents. The green agent is wandering about the scene, while the red agents seeks the green agent.
 ## Behaviors
 
 `KinematicSeek(agent, max_speed)` 
