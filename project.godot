@@ -14,6 +14,10 @@ config/name="follow-the-leader"
 run/main_scene="uid://bhvx7bbglk5ve"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
+[display]
+
+window/size/viewport_height=640
+
 [dotnet]
 
 project/assembly_name="follow-the-leader"
