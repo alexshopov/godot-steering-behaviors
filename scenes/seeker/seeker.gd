@@ -1,10 +1,11 @@
 class_name SeekerAgent
-extends Agent
+extends KinematicAgent
 
 @export var max_rotation: float = PI
 @export var update_interval: float = 0.25
 
-var current_target: Agent
+var current_target: KinematicAgent
+var kinematic: KinematicSteering
 var kinematic_seek: KinematicSeek
 var kinematic_wander: KinematicWander
 var is_seeking: bool = false
@@ -42,6 +43,7 @@ func _on_detection_area_body_exited(body:Node2D) -> void:
 
 func _draw() -> void:
 	draw_circle(Vector2.ZERO, 150., Color.RED, false)
+
 #
 # ---------------------------------------------------------------------------------
 func reset() -> void:

@@ -1,9 +1,9 @@
-class_name Agent extends CharacterBody2D
+class_name KinematicAgent extends CharacterBody2D
 
 @export var max_speed := 200
 @export var rotation_speed := 5.
 
-var steering: Steering
+var steering: KinematicSteering
 var screen_size: Vector2
 
 #
@@ -15,13 +15,13 @@ func _ready() -> void:
 #
 # ---------------------------------------------------------------------------------
 func _physics_process(delta: float) -> void:
-	var steering_out: SteeringOutput = steering.get_steering()
+	# var steering_out: SteeringOutput = steering.get_steering()
+	var steering_out = steering.get_steering()
 	if not steering_out:
 		return
 
-	velocity += steering_out.linear * delta
-	if velocity.length() > max_speed:
-		velocity = velocity.normalized() * max_speed
+	velocity = steering_out.linear
+	rotation = lerp_angle(rotation, steering_out.angular, rotation_speed * delta)
 
 	move_and_slide()
 
@@ -42,3 +42,4 @@ func reset() -> void:
 	# set a random initial velocity
 	var angle = randf_range(0, TAU)
 	velocity = Vector2.RIGHT.rotated(angle) * max_speed
+
