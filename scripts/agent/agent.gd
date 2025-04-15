@@ -1,9 +1,7 @@
-class_name Agent
-extends CharacterBody2D
+class_name Agent extends CharacterBody2D
 
 @export var max_speed := 200
 @export var rotation_speed := 5.
-@export var target: Vector2
 
 var kinematic: KinematicSteering
 var screen_size: Vector2
@@ -26,8 +24,8 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	position.x = fposmod(position.x, screen_size.x)
-	position.y = fposmod(position.y, screen_size.y)
+	position.x = wrapf(position.x, 0, screen_size.x)
+	position.y = wrapf(position.y, 0, screen_size.y)
 
 #
 # ---------------------------------------------------------------------------------

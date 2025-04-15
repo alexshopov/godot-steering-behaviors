@@ -1,11 +1,11 @@
 # steering controller base class for CharacterBody2D kinematic movement
 class_name KinematicSteering
 
-var agent: CharacterBody2D
+var agent: Agent
 var target: Vector2
 var max_speed: float
 
-func _init(p_agent: CharacterBody2D, p_target: Vector2, p_max_speed: float):
+func _init(p_agent: Agent, p_target: Vector2, p_max_speed: float):
 	agent = p_agent
 	target = p_target
 	max_speed = p_max_speed

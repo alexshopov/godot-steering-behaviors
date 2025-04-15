@@ -2,7 +2,7 @@ class_name KinematicWander extends KinematicSteering
 
 var max_rotation: float
 
-func _init(p_agent: CharacterBody2D, p_max_speed: float, p_max_rotation: float):
+func _init(p_agent: Agent, p_max_speed: float, p_max_rotation: float):
 	super(p_agent, Vector2.ZERO, p_max_speed)
 	max_rotation = p_max_rotation
 

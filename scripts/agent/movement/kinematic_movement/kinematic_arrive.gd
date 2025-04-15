@@ -1,11 +1,11 @@
 class_name KinematicArrive extends KinematicSteering
 
-var radius: float
-var time_to_target: float = 0.25
+var slowing_distance: float
+var ramp_down: float = 0.25
 
-func _init(p_agent: CharacterBody2D, p_target: Vector2, p_max_speed: float, p_radius: float):
+func _init(p_agent: Agent, p_target: Vector2, p_max_speed: float, p_slowing_distance: float):
 	super(p_agent, p_target,  p_max_speed)
-	radius = p_radius
+	slowing_distance = p_slowing_distance
 
 func get_steering() -> KinematicSteeringOutput:
 	var out = KinematicSteeringOutput.new()
@@ -14,17 +14,17 @@ func get_steering() -> KinematicSteeringOutput:
 
 	# get direction to target
 	out.velocity = target - agent.position
-	if out.velocity.length() < radius:
+	if out.velocity.length() < slowing_distance:
 		return null
 
-	# move to target in time_to_target seconds
-	out.velocity /= time_to_target
+	# reduce speed within the stopping radius
+	out.velocity /= ramp_down
 
 	# clip to max speed
 	if out.velocity.length() > max_speed:
-		out.velocity = out.velocity.normalized()
-		out.velocity *= max_speed
+		out.velocity = out.velocity.normalized() * max_speed
 
+	# turn in the direction of travel
 	if out.velocity.length() > 0:
 		out.rotation = out.velocity.angle()
 

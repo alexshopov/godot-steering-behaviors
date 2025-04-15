@@ -1,3 +1,4 @@
+class_name WanderingAgent
 extends Agent
 
 @export var max_rotation: float = PI
