@@ -6,6 +6,7 @@ func _init(p_agent: Node2D, p_target: Node2D, p_max_acceleration: float):
 	super(p_agent, p_target)
 	max_acceleration = p_max_acceleration
 
+# approach the target at a constant acceleration
 func get_steering() -> SteeringOutput:
 	var out = SteeringOutput.new()
 
