@@ -15,10 +15,9 @@ func _ready() -> void:
 	seek = KinematicSeek.new(self, null, max_speed)
 	steering = wander
 
-# update target position at defined intervals
-# -----------------------------------------------------------------
 func _process(delta: float) -> void:
 	if is_seeking:
+		# update target position at defined intervals
 		time_accumulator += delta
 		if time_accumulator >= update_interval:
 			time_accumulator = 0.0
@@ -31,9 +30,9 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if is_seeking and body == current_target:
-		_update_steering(wander, null)
+		_update_steering(wander)
 	
-func _update_steering(new_steering: KinematicSteering, new_target: KinematicAgent):
+func _update_steering(new_steering: KinematicSteering, new_target: KinematicAgent = null):
 	current_target = new_target 
 
 	steering = new_steering
