@@ -15,8 +15,7 @@ func _ready() -> void:
 #
 # ---------------------------------------------------------------------------------
 func _physics_process(delta: float) -> void:
-	# var steering_out: SteeringOutput = steering.get_steering()
-	var steering_out = steering.get_steering()
+	var steering_out: SteeringOutput = steering.get_steering()
 	if not steering_out:
 		return
 
@@ -42,4 +41,3 @@ func reset() -> void:
 	# set a random initial velocity
 	var angle = randf_range(0, TAU)
 	velocity = Vector2.RIGHT.rotated(angle) * max_speed
-
