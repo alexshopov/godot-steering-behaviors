@@ -23,12 +23,13 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAE
 tile_set = SubResource("TileSet_jyhfs")
 
 [node name="Wanderer" parent="." groups=["agents"] instance=ExtResource("4_jyhfs")]
+z_index = 1
 position = Vector2(870, 215)
 
 [node name="TestAgent" parent="." node_paths=PackedStringArray("v_target") groups=["agents"] instance=ExtResource("3_sugp2")]
+z_index = 1
 position = Vector2(433, 336)
 v_target = NodePath("../Target")
-max_acceleration = 500.0
 max_speed = 300.0
 
 [node name="Target" parent="." instance=ExtResource("5_tbgi4")]

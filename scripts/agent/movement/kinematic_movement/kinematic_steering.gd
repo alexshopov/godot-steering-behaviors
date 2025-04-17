@@ -2,10 +2,10 @@
 class_name KinematicSteering
 
 var agent: KinematicAgent
-var target: Vector2
+var target: Node2D
 var max_speed: float
 
-func _init(p_agent: KinematicAgent, p_target: Vector2, p_max_speed: float):
+func _init(p_agent: KinematicAgent, p_target: Node2D, p_max_speed: float):
 	agent = p_agent
 	target = p_target
 	max_speed = p_max_speed

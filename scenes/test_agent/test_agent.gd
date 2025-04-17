@@ -8,6 +8,7 @@ class_name TestAgent extends Agent
 @export var target_radius: float = 3
 @export var slow_radius: float = 100
 
+
 func _ready() -> void:
 	assert(v_target != null)
 
