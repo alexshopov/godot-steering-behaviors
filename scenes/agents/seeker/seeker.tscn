@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b3gyfyaqvv7pr"]
 
 [ext_resource type="Texture2D" uid="uid://bjjmm77j7s8pp" path="res://assets/sprites/agent.png" id="1_5t2pk"]
-[ext_resource type="Script" uid="uid://d0bue2f81re7q" path="res://scenes/seeker/seeker.gd" id="1_j4ock"]
+[ext_resource type="Script" uid="uid://d0bue2f81re7q" path="res://scenes/agents/seeker/seeker.gd" id="1_j4ock"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j4ock"]
 radius = 12.0
@@ -9,7 +9,7 @@ radius = 12.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_70npq"]
 radius = 150.0
 
-[node name="Seeker" type="CharacterBody2D"]
+[node name="Seeker" type="CharacterBody2D" groups=["agents"]]
 script = ExtResource("1_j4ock")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

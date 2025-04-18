@@ -24,6 +24,8 @@ func _physics_process(delta: float) -> void:
 	if velocity.length() > steering.max_speed:
 		velocity = velocity.normalized() * steering.max_speed
 
+	rotation += steering_out.angular * delta
+
 	move_and_slide()
 
 	if screen_size == Vector2.ZERO:

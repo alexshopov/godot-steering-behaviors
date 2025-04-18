@@ -1,9 +1,9 @@
 class_name Steering
 
-var max_speed: float
+var agent: Node2D
 var target: Node2D
 
-var agent: Node2D
+var max_speed: float
 
 func _init(p_agent: Node2D, p_target: Node2D) -> void:
     agent = p_agent
