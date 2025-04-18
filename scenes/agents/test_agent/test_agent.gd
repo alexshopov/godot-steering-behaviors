@@ -4,10 +4,10 @@ class_name TestAgent extends Agent
 @export var update_interval: float = 0.
 
 @export_group("Steering - Align")
-@export var max_rotation: float = 500.
-@export var max_angular_acceleration: float = 200
-@export var target_radius: float = 3
-@export var slow_radius: float = 100
+@export var max_rotation: float = PI
+@export var max_angular_acceleration: float = PI / 2
+@export var target_radius: float = 0.1 
+@export var slow_radius: float = 1
 
 var time_accumulator: float = 0.
 
