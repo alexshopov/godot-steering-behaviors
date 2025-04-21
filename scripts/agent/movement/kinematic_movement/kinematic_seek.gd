@@ -1,6 +1,6 @@
 class_name KinematicSeek extends KinematicSteering
 
-func _init(p_agent: KinematicAgent, p_target: Node2D, p_max_speed: float):
+func _init(p_agent: KinematicAgent2D, p_target: Node2D, p_max_speed: float):
 	super(p_agent, p_target, p_max_speed)
 
 func get_steering() -> SteeringOutput:

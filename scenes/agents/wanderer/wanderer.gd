@@ -1,5 +1,4 @@
-class_name WanderingAgent
-extends KinematicAgent
+class_name WanderingAgent extends KinematicAgent2D
 
 @export var max_rotation: float = PI
 

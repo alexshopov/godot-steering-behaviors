@@ -3,7 +3,7 @@ class_name KinematicArrive extends KinematicSteering
 var slowing_distance: float
 var ramp_down: float = 0.25
 
-func _init(p_agent: KinematicAgent, p_target: Node2D, p_max_speed: float, p_slowing_distance: float):
+func _init(p_agent: KinematicAgent2D, p_target: Node2D, p_max_speed: float, p_slowing_distance: float):
 	super(p_agent, p_target,  p_max_speed)
 	slowing_distance = p_slowing_distance
 

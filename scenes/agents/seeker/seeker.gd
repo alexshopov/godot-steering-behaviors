@@ -1,9 +1,9 @@
-class_name SeekerAgent extends KinematicAgent
+class_name SeekerAgent extends KinematicAgent2D
 
 @export var max_rotation: float = PI
 @export var update_interval: float = 0.25
 
-var current_target: KinematicAgent
+var current_target: KinematicAgent2D
 var seek: KinematicSeek
 var wander: KinematicWander
 var is_seeking: bool = false
@@ -32,7 +32,7 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 	if is_seeking and body == current_target:
 		_update_steering(wander)
 	
-func _update_steering(new_steering: KinematicSteering, new_target: KinematicAgent = null):
+func _update_steering(new_steering: KinematicSteering, new_target: KinematicAgent2D = null):
 	current_target = new_target 
 
 	steering = new_steering

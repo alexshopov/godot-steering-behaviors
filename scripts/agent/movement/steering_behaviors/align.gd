@@ -1,9 +1,9 @@
 class_name Align extends Steering
 
-var max_rotation: float
-var max_angular_acceleration: float
-var target_radius: float
-var slow_radius: float
+var max_rotation: float = PI
+var max_angular_acceleration: float = PI / 2
+var target_radius: float = .1
+var slow_radius: float = 0.1
 var ramp_up: float = 0.1
 
 func _init(p_agent: Node2D,

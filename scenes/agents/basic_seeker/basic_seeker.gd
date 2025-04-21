@@ -1,4 +1,4 @@
-class_name BasicSeeker extends KinematicAgent
+class_name BasicSeeker extends KinematicAgent2D
 
 @export var target_entity: Node2D
 

@@ -1,4 +1,4 @@
-class_name TestAgent extends Agent
+class_name TestAgent extends Agent2D
 
 @export var v_target: Node2D
 @export var update_interval: float = 0.
