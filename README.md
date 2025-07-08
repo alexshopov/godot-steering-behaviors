@@ -1,5 +1,7 @@
 # godot-steering-behaviors
-Implementing steering behaviors in Godot based on [AI for Games, Third Edition](https://www.goodreads.com/book/show/41755104-ai-for-games-third-edition)  by Ian Millington
+Learning Godot by implementing steering behaviors based on [AI for Games, Third Edition](https://www.goodreads.com/book/show/41755104-ai-for-games-third-edition)  by Ian Millington
+
+### *Archived. If you're not embarrassed by code you wrote 3 months ago, you're not growing as a dev. This was a useful project at the time, but I've learned much better ways to accomplish much of this now.* ###
 
 ![Screenshot 2025-04-14 114832](https://github.com/user-attachments/assets/3ea2585b-9c19-4579-9904-2df48c87ec61)
 
